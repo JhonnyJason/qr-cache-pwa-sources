@@ -1,6 +1,6 @@
 {
-    "name": "New Website",
-    "short_name": "N",
+    "name": "QR-Code Cache",
+    "short_name": "QRcch",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
