@@ -8,6 +8,7 @@ import * as messageboxmodule from "./messageboxmodule.js"
 import * as qrdisplaymodule from "./qrdisplaymodule.js"
 import * as qrreadermodule from "./qrreadermodule.js"
 import * as statemodule from "./statemodule.js"
+import * as usermodalmodule from "./usermodalmodule.js"
 import * as utilsmodule from "./utilsmodule.js"
 
 Modules = {
@@ -21,6 +22,7 @@ Modules = {
     qrdisplaymodule,
     qrreadermodule,
     statemodule,
+    usermodalmodule,
     utilsmodule,
 }
 

@@ -1,22 +1,48 @@
 // codeselection styles
-#codeselection
+#codeselection-element-template
+    display none
     height 100%
-    scroll-snap-type: y mandatory;
-    display flex
-    background-color rgba(0, 0, 0, 0.2)
-    scroll-y scroll
-    
-
-#blue-element
-    background-color: blue
-
-#green-element
-    background-color green
-
-#red-element
-    background-color red
+    width 100%
 
 .element
-    scroll-snap-align: start;
     height 100%
-    width 100vw
+    display flex
+    flex-direction: column
+    justify-content: space-around
+    background-color rgba(125, 188, 255, 0.2)
+    background-color rgba(0, 188, 255, 0.2)
+    background-color rgba(0, 90, 150, 0.2)
+    
+    h1
+        font-size 22pt
+        word-break: break-all
+        padding: 30px
+
+    h2 
+        font-size: 13pt
+        margin-top 10px
+
+    .show-code-button
+        background-color #024c
+        border-radius: 15px
+        padding 40px
+        width 80%
+        box-sizing: border-box
+        margin 0 auto
+
+        svg
+            height 100px
+            width 100px
+
+
+    .delete-code-button
+        background-color #300c
+        border-radius: 30px
+        padding 20px
+        width 160px
+        box-sizing: border-box
+        margin 0 auto
+
+        svg
+            height 50px
+            width 50px

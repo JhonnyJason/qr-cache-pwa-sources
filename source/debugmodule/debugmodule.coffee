@@ -6,9 +6,10 @@ export modulesToDebug = {
     addcodebuttonmodule: true
     acceptcodeframemodule: true
     # configmodule: true
+    codeselectionmodule: true
     contentmodule: true
     # messageboxmodule: true
-    # qrdisplaymodule: true
+    qrdisplaymodule: true
     # qrreadermodule: true
     
 }

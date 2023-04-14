@@ -1,0 +1,13 @@
+//- codeselection structure
+#codeselection-element-template
+    .element(element-index="{{{index}}}")
+        h1 {{{label}}}
+        .show-code-button.click-button
+            svg: use(href="#svg-qrcode-icon")
+            //- h2 Show <br> QR-Code
+            h2 SHOW
+        .delete-code-button.click-button 
+            svg: use(href="#svg-trash-icon")
+            //- h2 Delete<br> QR-Code
+            h2 DELETE
+

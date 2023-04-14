@@ -11,9 +11,15 @@ import { read as scanQR } from "./qrreadermodule.js"
 import * as acceptCode from "./acceptcodeframemodule.js"
 
 ############################################################
+addByScan = null
+addByInput = null
+
+############################################################
 export initialize = ->
     log "initialize"
+    addByScan = document.getElementById("add-by-scan")
     addByScan.addEventListener("click", addByScanClicked)
+    addByInput = document.getElementById("add-by-input")
     addByInput.addEventListener("click", addByInputClicked)
     return
 

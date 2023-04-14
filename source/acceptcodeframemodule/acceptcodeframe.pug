@@ -1,7 +1,13 @@
 //- acceptcodeframe structure
 #acceptcodeframe
+    //- #acceptcode-inputs
+    label#content-label(for="content") QR-Code Content 
+    textarea#content-textarea(name="content" rows="10") 
+    label#label-label QR-Code Label 
+    input#label-input
+
     #acceptcode-buttons 
-        #cancel-button
+        #cancel-button.click-button
             svg: use(href="#svg-cross-icon")
-        #accept-button
+        #accept-button.click-button
             svg: use(href="#svg-check-icon")
