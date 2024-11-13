@@ -1,23 +1,58 @@
 doctype html
-html(lang="en")
+html(lang=languageTag)
     head
         meta(charset='utf-8')
         
         //- Title and Description
-        title QR-Code Cache
-        meta(name='description', content='The QR-Code Cache PWA - scan and store QR-Codes from various places in one WebApp to access and display them!')
+        title !{pageTitle}
+        meta(name='description', content=pageDescription)
         
         //- Open Graph meta Tags
-        meta(property='og:image' content="https://qr-cache.dotv.ee/android-chrome-192x192.png")
-        meta(property='og:title' content="QR-Code Cache")
-        meta(property='og:description' content='The QR-Code Cache PWA - scan and store QR-Codes from various places in one WebApp to access and display them!')
-        meta(property='og:type' content="website")
-        meta(property='og:url' content="https://qr-cache.dotv.ee")
-        meta(property='og:locale' content="en_US")
+        meta(property='og:image' content=pageImageURL)
+        meta(property='og:title' content=pageTitle)
+        meta(property='og:description' content=pageDescription)
+        meta(property='og:type' content=pageType)
+        meta(property='og:url' content=pageURL)
+        meta(property='og:locale' content=pageLocale)
 
         //- Manifest
-        link(rel='manifest' href='manifest.json')
+        - 
+            const manifest = {
+                "id": "dotv.ee/qrcodecache-v0",
+                "name": pageTitle,
+                "short_name": "QRcch",
+                "start_url": "/index.html",
+                "scope": "/",
+                "icons": [
+                    { 
+                        "src": "/android-chrome-192x192.png", 
+                        "sizes": "192x192", 
+                        "type": "image/png" 
+                    },
+                    { 
+                        "src": "/android-chrome-512x512.png", 
+                        "sizes": "512x512", 
+                        "type": "image/png" 
+                    }
+                ],
+                "theme_color": "#002244",
+                "background_color": "#ffffff",
+                "display": "standalone",
+                "orientation": "portrait",
+                "display_override": ["standalone", "window-controls-overlay"],
+                "lang": languageTag,
+                "categories": ["tools", "utilities", "productivity", "convenience"],
+                "dir": "ltr",
+                "description": pageDescription
+            }
+            const manifestJson = JSON.stringify(manifest);
+            const encodedManifest = encodeURIComponent(manifestJson);
 
+        link(rel='manifest' href=`data:application/manifest+json,${encodedManifest}`)
+
+        //- link(rel='manifest' href='/manifest.json')
+        //- link(rel='manifest' href='data:application/manifest+json,{"id":"dotv.ee/qrcodecache-v0", "name":"'+pageTitle+'", "short_name": "QRcch", "start_url":"/", "scope": "/",     "icons": [ { "src": "/android-chrome-192x192.png","sizes": "192x192", "type": "image/png" }, { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" } ], "theme_color": "#002244", "background_color": "#ffffff", "display": "standalone", "orientation": "portrait", "display_override": [ "standalone", "window-controls-overlay" ], "lang": "'+languageTag+'", "categories": [ "tools", "utilities", "productivity", "convenience" ], "dir": "ltr", "description": "'+pageDescription+'"')
+       
         //- Favicon
         link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")
         link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")

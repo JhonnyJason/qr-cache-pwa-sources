@@ -9,7 +9,7 @@ ln -sfT ../../sources/ressources/img img
 
 ln -sf ../../sources/ressources/manifest/* .
 ln -sf ../../sources/ressources/favicon/* .
-ln -sf ../../sources/ressources/jsworker/* .
+ln -sf ../../toolset/build/bundles/dev/* .
 
 popd
 

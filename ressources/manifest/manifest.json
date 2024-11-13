@@ -1,6 +1,9 @@
 {
+    "id":"dotv.ee/qrcodecache-v0",
     "name": "QR-Code Cache",
     "short_name": "QRcch",
+    "start_url": "/",
+    "scope": "/",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,9 +16,21 @@
             "type": "image/png"
         }
     ],
-    "start_url": "/",
     "theme_color": "#002244",
     "background_color": "#ffffff",
     "display": "standalone",
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "display_override": [
+        "standalone",
+        "window-controls-overlay"
+    ],
+    "lang": "en",
+    "categories": [
+        "tools",
+        "utilities",
+        "productivity", 
+        "convenience"
+    ],
+    "dir": "ltr",
+    "description": "This is a small PWA capable of storing QR-Codes for faster access. A QR-Code Cache ;-)"
 }

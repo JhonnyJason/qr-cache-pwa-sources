@@ -1,0 +1,29 @@
+//- menu structure
+.hidden-templates
+    #menu-entry-template
+        a.menu-entry(user-index="{{{index}}}")
+            .menu-icon: svg: use(href="#svg-user-icon")
+            .menu-label {{{userLabel}}}
+    
+nav#menu
+    .menu-group 
+        a.menu-entry#add-manually-button
+            .menu-icon: svg: use(href="#svg-text-cursor")
+            .menu-label Type QR-Code        
+        a.menu-entry#order-qr-codes
+            .menu-icon: svg: use(href="#svg-sort-icon")
+            .menu-label Order QR-Codes
+    .menu-group 
+        a#menu-version.menu-entry
+            #up-to-date-icon.menu-icon: svg: use(href="#svg-check-mark-icon")
+            #to-update-icon.menu-icon: svg: use(href="#svg-update-icon")
+            #current-version.menu-label v0.1.x
+
+            #to-version-icon.menu-icon: svg: use(href="#svg-arrow-right-icon")
+            #new-version.menu-label v0.1.y
+    #menu-bottom-group
+        a#pwa-install-button
+            .top 
+                #pwa-install-icon: svg: use(href="#svg-phone-download-icon")
+                #pwa-install-label=content.menuPWAInstallLabel
+            #pwa-install-subtext=content.menuPWAInstallSubtext
